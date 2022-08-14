@@ -41,7 +41,7 @@ def possible_ai_hits_list(all_ai_hits, ai_possible_hits):
     if len(all_ai_hits) == 0:
         possiblehits = [ai_hits(ai_possible_hits)]
         return possiblehits 
-    if len(all_ai_hits) == 1 or not check_double_pattern(all_ai_hits): #WORKING CODE!!!
+    if len(all_ai_hits) == 1 or not check_double_pattern(all_ai_hits): 
         last_hit = all_ai_hits[-1]
         if last_hit[0].upper() == "A":
             listnum = 0
@@ -97,7 +97,6 @@ def possible_ai_hits_list(all_ai_hits, ai_possible_hits):
         return possiblehits
 
 
-#WORKING CODE
 def check_double_pattern(all_ai_hits): #returns true or false, checks if the number or letter follows each other #number stays same, letter increases, or letter increases and number stays the same
     last_hit = all_ai_hits[-1]
     second_last_hit = all_ai_hits[-2]
@@ -146,7 +145,7 @@ def double_pattern_true(all_ai_hits):
             possiblehits.append(index_to_coord(second_last_hit_num-1, int(last_hit[1])))
             return possiblehits
 
-#WORKING CODE
+
 def check_triple_pattern(all_ai_hits):
     last_hit = all_ai_hits[-1]
     second_last_hit = all_ai_hits[-2]
